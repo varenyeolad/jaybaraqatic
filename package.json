@@ -23,6 +23,7 @@
     "express-session": "^1.17.2",
     "express-validator": "^6.14.0",
     "fetch": "^1.1.0",
+    "heroku": "^7.60.2",
     "import": "^0.0.6",
     "json": "^11.0.0",
     "method-override": "^3.0.0",
