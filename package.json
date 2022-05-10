@@ -1,0 +1,40 @@
+{
+  "name": "untitled2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon java.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "affirmations": "^1.1.0",
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.0",
+    "fetch": "^1.1.0",
+    "import": "^0.0.6",
+    "json": "^11.0.0",
+    "method-override": "^3.0.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.3",
+    "node-fetch": "^3.2.3",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "play-sound": "^1.1.5",
+    "sound-play": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

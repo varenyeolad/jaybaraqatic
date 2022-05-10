@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+header{
+    width: 100%;
+    display: flex;
+
+}
+.header_logo{
+    margin-top: 32px;
+    margin-left: 10.5%;
+
+
+
+}
+body{
+    background-image: url('/public/img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    margin: 0;
+
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #B44715 ;
+
+}
+nav{
+    margin-top: 45px;
+    margin-left: 2%;
+}
+.container1 h3, h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:lighter;
+
+}
+.sign, .sign1{
+
+    justify-content: space-between;
+    background-color:#EDE9E7;
+    border-color: #B44715;
+    color: black;
+    padding: 16px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 30px;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    font-size: 20px;
+    font-weight:lighter;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sign1{
+    margin-right: 30px;
+}
+.sign .sign1:hover {
+    background-color: palevioletred; /* Green */
+    color: white;
+}
+.topnav a{
+    color:#B44715;
+    text-align: center;
+    padding: 20px 36px;
+    font-size: 30px;
+    font-weight:lighter;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+.topnav a:hover{
+    color: #2B1392;
+}
+.topnav .icon{
+    display: none;
+}
+
+@media screen and (max-width:1200px){
+    nav{
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width:1105px){
+    nav{
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width:1000px){
+    .topnav a{
+        display: none;
+    }
+    .topnav a.icon{
+        float: right;
+        margin-top: -17px;
+        display: block;
+        color: #2B1392 ;
+        font-size: 25px ;
+    }
+
+    nav{
+        width: 100%;
+    }
+    .topnav.responsive{
+        position: relative;
+        top: 50px;
+        left: -200px;
+
+
+    }
+    header .topnav.responsive{
+        height: 340px;
+    }
+    .topnav.responsive a.icon{
+        position: absolute;
+        top: -50px;
+        right: -200px;
+
+    }
+    .topnav.responsive a{
+        float: none;
+        display: block;
+        text-align:left;
+    }
+}
+

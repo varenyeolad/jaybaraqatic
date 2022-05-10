@@ -1,0 +1,175 @@
+<%-include('header')-%>
+<html>
+<head>
+    <title>Affirmation Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="affirmations.json" ></script>
+    <script src="aff.js"></script>
+
+    <style>
+        body {
+            font-family: "Raleway", sans-serif;
+            color: white;
+            background: rgb(148,168,238);
+            background: -moz-radial-gradient(circle, rgba(148,168,238,1) 0%, rgba(240,201,168,1) 100%);
+            background: -webkit-radial-gradient(circle, rgba(148,168,238,1) 0%, rgba(240,201,168,1) 100%);
+            background: radial-gradient(circle, rgba(148,168,238,1) 0%, rgba(240,201,168,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#94a8ee",endColorstr="#f0c9a8",GradientType=1);
+        }
+
+        main {
+            margin: 0 auto;
+            padding-top: 10%;
+            width: 100%;
+            max-width: 900px;
+
+        }
+
+        .affirmation-container {
+            box-sizing: border-box;
+            padding: 30px;
+            margin: 25px;
+            font-size: 30px;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+        }
+        .alertsPanel h2 {
+            padding: 5px;
+            background-color: red;
+            color: white;
+        }
+
+        section button, section a {
+            text-align: center;
+            color: white;
+            border: none;
+            font-size: 25px;
+            text-decoration: none;
+            font-family: "Raleway", sans-serif;
+            padding: 10px 25px 10px 25px;
+            outline: none;
+            margin: 5px;
+        }
+        section p {
+
+        }
+
+        footer {
+position: sticky;
+        }
+
+    </style>
+</head>
+<body>
+<!-- <header>
+   <h1>Affirmation Generator</h1>
+ </header> -->
+<main>
+    <section class="affirmation-container">
+        <p class="affirmation"></p><br>
+        <p><button onclick="changeAffirmation()">Change Affirmation</button></p>
+    </section>
+
+
+</main>
+
+</body>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+
+
+        const affirmations = [
+            "You got this",
+            "You'll figure it out",
+            "You're a smart cookie",
+            "I believe in you",
+            "Sucking at something is the first step towards being good at something",
+            "Struggling is part of learning",
+            "Everything has cracks - that's how the light gets in",
+            "Mistakes don't make you less capable",
+            "We are all works in progress",
+            "You are a capable human",
+            "You know more than you think",
+            "10x engineers are a myth",
+            "If everything was easy you'd be bored",
+            "I admire you for taking this on",
+            "You're resourceful and clever",
+            "You'll find a way",
+            "I know you'll sort it out",
+            "Struggling means you're learning",
+            "You're doing a great job",
+            "It'll feel magical when it's working",
+            "I'm rooting for you",
+            "Your mind is full of brilliant ideas",
+            "You make a difference in the world by simply existing in it",
+            "You are learning valuable lessons from yourself every day",
+            "You are worthy and deserving of respect",
+            "You know more than you knew yesterday",
+            "You're an inspiration",
+            "Your life is already a miracle of chance waiting for you to shape its destiny",
+            "Your life is about to be incredible",
+            "Nothing is impossible. The word itself says 'I’m possible!'",
+            "Failure is just another way to learn how to do something right",
+            "I give myself permission to do what is right for me",
+            "You can do it",
+            "It is not a sprint, it is a marathon. One step at a time",
+            "Success is the progressive realization of a worthy goal",
+            "People with goals succeed because they know where they’re going",
+            "All you need is the plan, the roadmap, and the courage to press on to your destination",
+            "The opposite of courage in our society is not cowardice... it is conformity",
+            "Whenever we’re afraid, it’s because we don’t know enough. If we understood enough, we would never be afraid",
+            "The past does not equal the future",
+            "The path to success is to take massive, determined action",
+            "It’s what you practice in private that you will be rewarded for in public",
+            "Small progress is still progress",
+            "Don't worry if you find flaws in your past creations, it's because you've evolved",
+            "Starting is the most difficult step - but you can do it",
+            "Don't forget to enjoy the journey",
+            "It's not a mistake, it's a learning opportunity",
+        ];
+
+
+        const colors = [
+        "#B1A2CA", "#fbf8cc","#fde4cf","#ffcfd2","#f1c0e8","#cfbaf0","#a3c4f3"
+        ];
+        function getAffirmations() {
+        for (let i = 0; i < affirmations.length; i++) {
+        console.log(affirmations[i]);
+    }
+    }
+
+        function getRandomAffirmation() {
+        let randomNumber = Math.floor(Math.random() * affirmations.length);
+        return affirmations[randomNumber];
+    }
+
+        function getRandomColor() {
+        const randomNumber = Math.floor(Math.random() * colors.length);
+        const color = colors[randomNumber];
+        return color;
+    }
+
+        function changeAffirmation() {
+        const affirmation = getRandomAffirmation();
+        const randomColor = getRandomColor();
+
+        $(".affirmation").text(affirmation);
+        $("section p").animate({color: randomColor}, 300);
+        $("body").animate({backgroundColor: randomColor}, 300);
+        $("section p button").animate({backgroundColor: randomColor}, 300);
+        $("section p a").animate({backgroundColor: randomColor}, 300);
+    }
+
+        $(function() {
+        changeAffirmation();
+    })
+</script>
+
